@@ -65,11 +65,11 @@ impl<T: std::cmp::Ord + Copy> PriorityQueue<T> {
         let mut greatest_element_index = element_index;
 
         if self.array.get(left_child_index) > self.array.get(element_index) {
-            greatest_element_index = left_child_index
-        };
+            greatest_element_index = left_child_index;
+        }
         if self.array.get(right_child_index) > self.array.get(element_index) {
-            greatest_element_index = right_child_index
-        };
+            greatest_element_index = right_child_index;
+        }
 
         if greatest_element_index == element_index {
             return;
