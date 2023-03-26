@@ -1,14 +1,14 @@
 class Graph
   class Relation
-    attr_reader :to, :weight, :orientation
+    attr_reader :to, :weight
 
-    def initialize(to, weight, orientation)
+    def initialize(to, weight)
       # :fb - forward backward, :f - forward, :b - backward
-      @to, @weight, @orientation = to, weight, orientation
+      @to, @weight = to, weight
     end
 
     def ==(rel)
-      rel.to == @to && rel.weight == @weight && rel.orientation == @orientation
+      rel.to == @to && rel.weight == @weight
     end
   end
 end

@@ -9,8 +9,8 @@ class Graph
       @relations = r
     end
 
-    def add_relation(to_vertex, weight:, orientation:)
-      @relations << Relation.new(to_vertex, weight, orientation)
+    def add_relation(to_vertex, weight:)
+      @relations << Relation.new(to_vertex, weight)
     end
 
     def ==(vertex)

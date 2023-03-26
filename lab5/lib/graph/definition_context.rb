@@ -19,18 +19,8 @@ class Graph
           end
       end
 
-      def >>(to_vertex_with_weight)
-        @vertex.add_relation(to_vertex_with_weight.vertex, weight: to_vertex_with_weight.weight, orientation: :f)
-        to_vertex_with_weight
-      end
-
-      def <<(to_vertex_with_weight)
-        @vertex.add_relation(to_vertex_with_weight.vertex, weight: to_vertex_with_weight.weight, orientation: :b)
-        to_vertex_with_weight
-      end
-
       def |(to_vertex_with_weight)
-        @vertex.add_relation(to_vertex_with_weight.vertex, weight: to_vertex_with_weight.weight, orientation: :fb)
+        @vertex.add_relation(to_vertex_with_weight.vertex, weight: to_vertex_with_weight.weight)
         to_vertex_with_weight
       end
     end

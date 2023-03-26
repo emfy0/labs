@@ -6,16 +6,16 @@ RSpec.describe Graph do
       head = set_head(v(1))
 
       head | v(2, 3) | v(3, 5)
-      head >> v(4, 2) << v(5, 4)
+      head | v(4, 2) | v(5, 4)
     end
 
     head = graph.head
 
-    last1 = Graph::Relation.new Graph::Vertex.new(3), 5, :fb
-    last2 = Graph::Relation.new Graph::Vertex.new(5), 4, :b
+    last1 = Graph::Relation.new Graph::Vertex.new(3), 5
+    last2 = Graph::Relation.new Graph::Vertex.new(5), 4
 
-    first1 = Graph::Relation.new Graph::Vertex.new(2, [last1]), 3, :fb
-    first2 = Graph::Relation.new Graph::Vertex.new(4, [last2]), 2, :f
+    first1 = Graph::Relation.new Graph::Vertex.new(2, [last1]), 3
+    first2 = Graph::Relation.new Graph::Vertex.new(4, [last2]), 2
 
     head_t = Graph::Vertex.new(1, [first1, first2])
 
