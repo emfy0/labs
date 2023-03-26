@@ -13,8 +13,8 @@ class Graph
       @relations << Relation.new(to_vertex, weight)
     end
 
-    def ==(vertex)
-      value == vertex.value && relations == vertex.relations
+    def ==(other)
+      value == other.value && relations == other.relations
     end
   end
 end

@@ -4,12 +4,12 @@ class Graph
 
     def initialize(to, weight)
       # :fb - forward backward, :f - forward, :b - backward
-      @to, @weight = to, weight
+      @to = to
+      @weight = weight
     end
 
-    def ==(rel)
-      rel.to == @to && rel.weight == @weight
+    def ==(other)
+      other.to == @to && other.weight == @weight
     end
   end
 end
-

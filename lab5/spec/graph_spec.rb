@@ -74,7 +74,7 @@ RSpec.describe Graph do
     end
 
     expect(graph.dijkstra).to eq({
-      1 => 0, 2 => 5, 3 => 7, 5 => 9, 7 => 11, 4 => 6, 8 => 7, 6 => 6
-    })
+                                   1 => 0, 2 => 5, 3 => 7, 5 => 9, 7 => 11, 4 => 6, 8 => 7, 6 => 6
+                                 })
   end
 end

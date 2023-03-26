@@ -61,9 +61,7 @@ class Graph
     add_to_queue vertexes.find_all { |v| v.relations.any? { |r| r.to == head } }
     send :"do_#{alg}", head
 
-    until @queue.empty?
-      send :"do_#{alg}", @queue.shift
-    end
+    send :"do_#{alg}", @queue.shift until @queue.empty?
 
     @visited_values
   end
@@ -77,7 +75,6 @@ class Graph
     first = @queue.shift
     do_bfc(first) if first
   end
-
 
   def do_dsf(vertex)
     return unless visit_value(vertex.value)
