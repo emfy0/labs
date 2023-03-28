@@ -12,8 +12,8 @@ class String
   end
 end
 
-n         = 50000
+n         = 50_000
 string    = 'hello world'
 substring = 'world'
 
-string.rk_search('world')
+puts string.rk_search('world')

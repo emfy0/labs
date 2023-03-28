@@ -64,12 +64,12 @@ should_be    = [4, 14, 22, 37]
 test         = KMP.new test_str, test_pattern
 
 p test.results
-raise 'This is wrong' unless test.results == should_be
+raise unless test.results == should_be
 
-test_str2     = 'How do you do? Great thanks!'
+test_str2     = 'asdasdasdasdasd'
 test_pattern2 = 'potato'
 should_be2    = []
 test2         = KMP.new test_str2, test_pattern2
 
 p test2.results
-raise 'This is wrong' unless test2.results == should_be2
+raise unless test2.results == should_be2
